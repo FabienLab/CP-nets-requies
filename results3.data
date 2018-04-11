@@ -1,0 +1,4 @@
+
+3rd experience (learn from dataset):
+for 10000 objects, with 13 parents and acyclicity (5 x 10 rounds), we have 66.16668718581082% of agreement (ecart-type = 0.3627130928595183) and computation takes 172.9707529117582 seconds (ecart-type = 6.475359737536555).
+for 10000 objects, with 14 parents and acyclicity (5 x 10 rounds), we have 66.26453417537515% of agreement (ecart-type = 0.3125386526134848) and computation takes 185.89363839875423 seconds (ecart-type = 9.829693581093801).
