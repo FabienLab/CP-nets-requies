@@ -270,7 +270,7 @@ def learningCPNet(fileName,v,b,numberOfParents1,numberOfParents2,smooth,smooth2,
 # n = [3,4,5,6,7,8,9,10,11,12]
 # e = [1,3,-1]
 
-# file = open("results1.data","w")
+# file = open("results1.dat","w")
 # print("1st experience")
 # file.write("\n1st experience (learn from random CPNet):\n")
 # for i in n:
@@ -287,17 +287,17 @@ prob = 10
 # file = open("results_" + str(prob) + ".dat","w")
 # p = [0,1,2,3,4,5,6,7]
 # for j in p:
-	# a,ecA,minA,maxA,t,ecT,minT,maxT,meanConvergenceAccuracy,sdConvergenceAccuracy = learningCPNet("",8,-1,-1,j,10,3,True,False,5000,8,-1,False,False,False,prob)
+	# a,ecA,minA,maxA,t,ecT,minT,maxT,meanConvergenceAccuracy,sdConvergenceAccuracy = learningCPNet("",8,-1,-1,j,10,3,True,False,5000,8,-1,False,False,True,prob)
 	# file.write(str(j) + " " + str(a) + " " + str(ecA) + "\n")
 # file.close()
 
-a,ecA,minA,maxA,t,ecT,minT,maxT,meanConvergenceAccuracy,sdConvergenceAccuracy = learningCPNet("",8,-1,-1,-1,10,3,True,False,5000,8,-1,False,True,False,prob)
-convfile = open("test_conv_" + str(prob) + ".dat","w")
-convfile.write("0 100 0\n")
-for i,v in enumerate(meanConvergenceAccuracy):
-	convfile.write(str(i+1) + " " + str(100-v) + " " + str(sdConvergenceAccuracy[i]) + "\n")
-convfile.write("\n")
-convfile.close()
+# a,ecA,minA,maxA,t,ecT,minT,maxT,meanConvergenceAccuracy,sdConvergenceAccuracy = learningCPNet("",8,-1,-1,-1,10,3,True,False,5000,8,-1,False,True,False,prob)
+# convfile = open("test_conv_" + str(prob) + ".dat","w")
+# convfile.write("0 100 0\n")
+# for i,v in enumerate(meanConvergenceAccuracy):
+	# convfile.write(str(i+1) + " " + str(100-v) + " " + str(sdConvergenceAccuracy[i]) + "\n")
+# convfile.write("\n")
+# convfile.close()
 
 # file = open("results_trte_" + str(prob) + ".dat","w")
 # p = [0,1,2,3,4,5,6,7]
@@ -313,61 +313,60 @@ convfile.close()
 
 
 
+file = open("results3.dat","w")
+print("3rd experience")
+file.write("\n3rd experience (learn from dataset):\n")
+p = [0,1,2,3,4,5,6]
+for j in p:
+	a,ecA,minA,maxA,t,ecT,minT,maxT,meanConvergenceAccuracy,sdConvergenceAccuracy = learningCPNet("",1,1,-1,j,5,10,True,False,50,-1,5,False,False,True,prob)
+	file.write("for 50 objects, with " + str(j) + " parents and acyclicity (5 x 10 rounds), we have " + str(a) + "% of agreement (ecart-type = " + str(ecA) + ") and computation takes " + str(t) + " seconds (ecart-type = " + str(ecT) + ").\n")
+file.write("\n")
+print("1")
+for j in p:
+	a,ecA,minA,maxA,t,ecT,minT,maxT,meanConvergenceAccuracy,sdConvergenceAccuracy = learningCPNet("hotels_fca_binarisation.dat",1,1,-1,j,5,10,False,False,-1,-1,5,True,False,False,prob)
+	file.write("for hotels_fca_binarisation.data, with " + str(j) + " parents and acyclicity (5 x 10 rounds), we have " + str(a) + "% of agreement (ecart-type = " + str(ecA) + ") and computation takes " + str(t) + " seconds (ecart-type = " + str(ecT) + ").\n")
+file.write("\n")
+print("2")
+p = [0,1,2,3,4,5,6,7,8,9]
+for j in p:
+	a,ecA,minA,maxA,t,ecT,minT,maxT,meanConvergenceAccuracy,sdConvergenceAccuracy = learningCPNet("",1,1,-1,j,5,10,True,False,500,-1,5,False,False,True,prob)
+	file.write("for 500 objects, with " + str(j) + " parents and acyclicity (5 x 10 rounds), we have " + str(a) + "% of agreement (ecart-type = " + str(ecA) + ") and computation takes " + str(t) + " seconds (ecart-type = " + str(ecT) + ").\n")
+file.write("\n")
+print("3")
+p = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14]
+for j in p:
+	a,ecA,minA,maxA,t,ecT,minT,maxT,meanConvergenceAccuracy,sdConvergenceAccuracy = learningCPNet("",1,1,-1,j,5,10,True,False,10000,-1,5,False,False,True,prob)
+	file.write("for 10000 objects, with " + str(j) + " parents and acyclicity (5 x 10 rounds), we have " + str(a) + "% of agreement (ecart-type = " + str(ecA) + ") and computation takes " + str(t) + " seconds (ecart-type = " + str(ecT) + ").\n")
+file.close()
 
-# file = open("results3.data","w")
-# print("3rd experience")
-# file.write("\n3rd experience (learn from dataset):\n")
-# p = [0,1,2,3,4,5,6]
-# for j in p:
-	# a,ecA,minA,maxA,t,ecT,minT,maxT = learningCPNet("",1,1,-1,j,5,10,False,False,50,-1,5,False)
-	# file.write("for 50 objects, with " + str(j) + " parents and acyclicity (5 x 10 rounds), we have " + str(a) + "% of agreement (ecart-type = " + str(ecA) + ") and computation takes " + str(t) + " seconds (ecart-type = " + str(ecT) + ").\n")
-# file.write("\n")
-# print("1")
-# for j in p:
-	# a,ecA,minA,maxA,t,ecT,minT,maxT = learningCPNet("hotels_fca_binarisation.data",1,1,-1,j,5,10,False,False,-1,-1,5,True)
-	# file.write("for hotels_fca_binarisation.data, with " + str(j) + " parents and acyclicity (5 x 10 rounds), we have " + str(a) + "% of agreement (ecart-type = " + str(ecA) + ") and computation takes " + str(t) + " seconds (ecart-type = " + str(ecT) + ").\n")
-# file.write("\n")
-# print("2")
-# p = [0,1,2,3,4,5,6,7,8,9]
-# for j in p:
-	# a,ecA,minA,maxA,t,ecT,minT,maxT = learningCPNet("",1,1,-1,j,5,10,False,False,500,-1,5,False)
-	# file.write("for 500 objects, with " + str(j) + " parents and acyclicity (5 x 10 rounds), we have " + str(a) + "% of agreement (ecart-type = " + str(ecA) + ") and computation takes " + str(t) + " seconds (ecart-type = " + str(ecT) + ").\n")
-# file.write("\n")
-# print("3")
-# p = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14]
-# for j in p:
-	# a,ecA,minA,maxA,t,ecT,minT,maxT = learningCPNet("",1,1,-1,j,5,10,False,False,10000,-1,5,False)
-	# file.write("for 10000 objects, with " + str(j) + " parents and acyclicity (5 x 10 rounds), we have " + str(a) + "% of agreement (ecart-type = " + str(ecA) + ") and computation takes " + str(t) + " seconds (ecart-type = " + str(ecT) + ").\n")
-# file.close()
 
-
-# file = open("results4.data","w")
+# file = open("results4.dat","w")
 # print("4th experience")
 # file.write("\n4th experience (fix the number of variables):\n")
 # p = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14]
 # for i in p:
-	# a,ecA,minA,maxA,t,ecT,minT,maxT = learningCPNet("",1,1,-1,i,2,5,False,False,500,15,5,False)
+	# a,ecA,minA,maxA,t,ecT,minT,maxT,meanConvergenceAccuracy,sdConvergenceAccuracy = learningCPNet("",1,1,-1,i,2,5,False,False,500,15,5,False,False,True,prob)
 	# file.write("for 500 objects and 15 attributes, with " + str(i) + " parents and acyclicity (2 x 5 rounds), we have " + str(a) + "% of agreement (ecart-type = " + str(ecA) + ") and computation takes " + str(t) + " seconds (ecart-type = " + str(ecT) + ").\n")
 # file.write("\n")
 # print("1")
 # for i in p:
-	# a,ecA,minA,maxA,t,ecT,minT,maxT = learningCPNet("",1,1,-1,i,2,5,False,False,1000,15,5,False)
+	# a,ecA,minA,maxA,t,ecT,minT,maxT,meanConvergenceAccuracy,sdConvergenceAccuracy = learningCPNet("",1,1,-1,i,2,5,False,False,1000,15,5,False,False,True,prob)
 	# file.write("for 1000 objects and 15 attributes, with " + str(i) + " parents and acyclicity (2 x 5 rounds), we have " + str(a) + "% of agreement (ecart-type = " + str(ecA) + ") and computation takes " + str(t) + " seconds (ecart-type = " + str(ecT) + ").\n")
 # file.write("\n")
 # print("2")
 # for i in p:
-	# a,ecA,minA,maxA,t,ecT,minT,maxT = learningCPNet("",1,1,-1,i,2,5,False,False,5000,15,5,False)
+	# a,ecA,minA,maxA,t,ecT,minT,maxT,meanConvergenceAccuracy,sdConvergenceAccuracy = learningCPNet("",1,1,-1,i,2,5,False,False,5000,15,5,False,False,True,prob)
 	# file.write("for 5000 objects and 15 attributes, with " + str(i) + " parents and acyclicity (2 x 5 rounds), we have " + str(a) + "% of agreement (ecart-type = " + str(ecA) + ") and computation takes " + str(t) + " seconds (ecart-type = " + str(ecT) + ").\n")
 # file.write("\n")
 # print("3")
 # for i in p:
-	# a,ecA,minA,maxA,t,ecT,minT,maxT = learningCPNet("",1,1,-1,i,2,5,False,False,10000,15,5,False)
+	# a,ecA,minA,maxA,t,ecT,minT,maxT,meanConvergenceAccuracy,sdConvergenceAccuracy = learningCPNet("",1,1,-1,i,2,5,False,False,10000,15,5,False,False,True,prob)
 	# file.write("for 10000 objects and 15 attributes, with " + str(i) + " parents and acyclicity (2 x 5 rounds), we have " + str(a) + "% of agreement (ecart-type = " + str(ecA) + ") and computation takes " + str(t) + " seconds (ecart-type = " + str(ecT) + ").\n")
 # file.write("\n")
 # print("4")
 # p = [0,1,2,3,4,5,6,7,8,9,10,11,12]
 # for i in p:
-	# a,ecA,minA,maxA,t,ecT,minT,maxT = learningCPNet("",1,1,-1,i,2,5,False,False,20000,15,5,False)
+	# a,ecA,minA,maxA,t,ecT,minT,maxT,meanConvergenceAccuracy,sdConvergenceAccuracy = learningCPNet("",1,1,-1,i,2,5,False,False,20000,15,5,False,False,True,prob)
 	# file.write("for 20000 objects and 15 attributes, with " + str(i) + " parents and acyclicity (2 x 5 rounds), we have " + str(a) + "% of agreement (ecart-type = " + str(ecA) + ") and computation takes " + str(t) + " seconds (ecart-type = " + str(ecT) + ").\n")
 # file.close()
 
