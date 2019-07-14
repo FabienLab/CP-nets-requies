@@ -1,0 +1,21 @@
+
+1st experience (learn from random CPNet):
+for 3 variables, with 5 parents, delta = 1 and acyclicity (10 x 3 rounds), we have 100.0% of agreement (ecart-type = 0.0) and computation takes 0.0005569008184351278 seconds (ecart-type = 0.0002907424609116457).
+for 3 variables, with 5 parents, delta = 3 and acyclicity (10 x 3 rounds), we have 100.0% of agreement (ecart-type = 0.0) and computation takes 0.0003709631026281409 seconds (ecart-type = 0.00018100424622121043).
+for 3 variables, with 5 parents, delta = -1 and acyclicity (10 x 3 rounds), we have 100.0% of agreement (ecart-type = 0.0) and computation takes 0.0005759456860143774 seconds (ecart-type = 0.00035953177085647323).
+for 4 variables, with 5 parents, delta = 1 and acyclicity (10 x 3 rounds), we have 100.0% of agreement (ecart-type = 0.0) and computation takes 0.0012710390033312683 seconds (ecart-type = 0.0004872975982651972).
+for 4 variables, with 5 parents, delta = 3 and acyclicity (10 x 3 rounds), we have 99.58333333333333% of agreement (ecart-type = 1.7854576991355182) and computation takes 0.001658956219612794 seconds (ecart-type = 0.0003682570927683886).
+for 4 variables, with 5 parents, delta = -1 and acyclicity (10 x 3 rounds), we have 99.47916666666667% of agreement (ecart-type = 1.8502921872398737) and computation takes 0.0017670038482543403 seconds (ecart-type = 0.00043462560712497736).
+for 5 variables, with 5 parents, delta = 1 and acyclicity (10 x 3 rounds), we have 100.0% of agreement (ecart-type = 0.0) and computation takes 0.0032227894712166527 seconds (ecart-type = 0.001131819955875418).
+for 5 variables, with 5 parents, delta = 3 and acyclicity (10 x 3 rounds), we have 98.5% of agreement (ecart-type = 3.1724840696863703) and computation takes 0.005964477457237745 seconds (ecart-type = 0.0009081866800336799).
+for 5 variables, with 5 parents, delta = -1 and acyclicity (10 x 3 rounds), we have 98.375% of agreement (ecart-type = 3.218849387484656) and computation takes 0.006091544610986736 seconds (ecart-type = 0.000973843421469117).
+for 6 variables, with 5 parents, delta = 1 and acyclicity (10 x 3 rounds), we have 100.0% of agreement (ecart-type = 0.0) and computation takes 0.010505632997925703 seconds (ecart-type = 0.004953370194998451).
+for 6 variables, with 5 parents, delta = 3 and acyclicity (10 x 3 rounds), we have 97.74305555555557% of agreement (ecart-type = 2.8928798784360223) and computation takes 0.02351707892532712 seconds (ecart-type = 0.0023197290645379075).
+for 6 variables, with 5 parents, delta = -1 and acyclicity (10 x 3 rounds), we have 97.2048611111111% of agreement (ecart-type = 4.056286079268155) and computation takes 0.02495295803666805 seconds (ecart-type = 0.005994804359453586).
+for 7 variables, with 5 parents, delta = 1 and acyclicity (10 x 3 rounds), we have 99.01785714285714% of agreement (ecart-type = 1.909934351200913) and computation takes 0.03155145345411554 seconds (ecart-type = 0.016009148352266796).
+for 7 variables, with 5 parents, delta = 3 and acyclicity (10 x 3 rounds), we have 93.02083333333334% of agreement (ecart-type = 4.107483074721675) and computation takes 0.08730319353158748 seconds (ecart-type = 0.011829909038540419).
+for 7 variables, with 5 parents, delta = -1 and acyclicity (10 x 3 rounds), we have 93.92857142857142% of agreement (ecart-type = 4.4713613877764935) and computation takes 0.0739594444423326 seconds (ecart-type = 0.006777559895954301).
+for 8 variables, with 5 parents, delta = 1 and acyclicity (10 x 3 rounds), we have 97.83854166666667% of agreement (ecart-type = 3.1630451704582394) and computation takes 0.06819845436264309 seconds (ecart-type = 0.04020491364530868).
+for 8 variables, with 5 parents, delta = 3 and acyclicity (10 x 3 rounds), we have 91.17838541666667% of agreement (ecart-type = 5.536422082102937) and computation takes 0.21308536991772567 seconds (ecart-type = 0.028058875642948528).
+for 8 variables, with 5 parents, delta = -1 and acyclicity (10 x 3 rounds), we have 90.80729166666667% of agreement (ecart-type = 5.267056257784346) and computation takes 0.2176852312944052 seconds (ecart-type = 0.022276088951977413).
+for 9 variables, with 5 parents, delta = 1 and acyclicity (10 x 3 rounds), we have 97.22800925925927% of agreement (ecart-type = 4.046828741278198) and computation takes 0.21519575158802245 seconds (ecart-type = 0.11995364150701694).

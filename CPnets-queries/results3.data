@@ -1,0 +1,10 @@
+
+3rd experience (learn from dataset):
+for 50 objects, with 0 parents and acyclicity (5 x 10 rounds), we have 79.99999999999997% of agreement (ecart-type = 36.34366076779463) and computation takes 0.00039218727369973205 seconds (ecart-type = 0.00018503388293180235).
+for 50 objects, with 1 parents and acyclicity (5 x 10 rounds), we have 76.66666666666666% of agreement (ecart-type = 39.26767262493008) and computation takes 0.0003856109047601125 seconds (ecart-type = 0.00012785392761260203).
+for 50 objects, with 2 parents and acyclicity (5 x 10 rounds), we have 81.66666666666667% of agreement (ecart-type = 6.299407883487119) and computation takes 0.0006063488189715696 seconds (ecart-type = 0.00015240068910152342).
+for 50 objects, with 3 parents and acyclicity (5 x 10 rounds), we have 90.00000000000004% of agreement (ecart-type = 9.816918156232521) and computation takes 0.0005181038313621333 seconds (ecart-type = 0.00028680085656349215).
+for 50 objects, with 4 parents and acyclicity (5 x 10 rounds), we have 90.0% of agreement (ecart-type = 9.816918156232523) and computation takes 0.0005663812218437336 seconds (ecart-type = 0.0003093550797694465).
+for 50 objects, with 5 parents and acyclicity (5 x 10 rounds), we have 75.00000000000006% of agreement (ecart-type = 34.09005015065798) and computation takes 0.0005062587645321614 seconds (ecart-type = 0.0002230108339178563).
+for 50 objects, with 6 parents and acyclicity (5 x 10 rounds), we have 90.0% of agreement (ecart-type = 6.299407883487117) and computation takes 0.0005167277356649413 seconds (ecart-type = 0.00014947701494920655).
+
